@@ -1,0 +1,30 @@
+admin
+账号：admin
+密码：Turing2018
+alert("test");
+
+
+
+1.需求(无法跨域)  http://127.0.0.1:9527/api/auth/oauth/token
+      1>VS项目名/config/index.js
+
+2.具体实现AuthApp   http://localhost:9777/auth
+        url: /oauth/token
+        method: post
+        data
+                   const data = {
+                     username,
+                     password:str,
+                     code,
+                     image,
+                     grant_type: 'password'
+                   }
+3.从AuthBootstrap(Feign)转到AdminBootstrap(cn.turing.firecontrol.admin.rpc.LogRest.saveLog(cn.turing.firecontrol.api.vo.log.LogInfo))
+    /*
+     2021-03-04 14:38:40.731 [main] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/log/save],methods=[POST]}" onto public void cn.turing.firecontrol.admin.rpc.LogRest.saveLog(cn.turing.firecontrol.api.vo.log.LogInfo)
+     LogRest.saveLog
+    LogInfo
+    */
+
+，修改launch.json文件，配置如下：
+
